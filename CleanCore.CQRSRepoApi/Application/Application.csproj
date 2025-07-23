@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\DTOs\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Features\Authentication\Commands\Login\" />
+    <Folder Include="Features\Authentication\Commands\Register\" />
+    <Folder Include="Features\Authentication\Queries\" />
+    <Folder Include="Features\Users\" />
+  </ItemGroup>
+
+</Project>
