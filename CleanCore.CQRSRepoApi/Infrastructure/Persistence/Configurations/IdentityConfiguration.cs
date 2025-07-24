@@ -1,6 +1,16 @@
-﻿namespace Infrastructure.Persistence.Configurations
+﻿using Domain.Entities.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Infrastructure.Persistence.Configurations
 {
-    internal class IdentityConfiguration
+    public class IdentityConfiguration : IEntityTypeConfiguration<ApplicationRole>
     {
+        public void Configure(EntityTypeBuilder<ApplicationRole> builder)
+        {
+            builder.ToTable("Roles");
+
+            builder.Property(r => r.Description).HasMaxLength(250);
+        }
     }
 }

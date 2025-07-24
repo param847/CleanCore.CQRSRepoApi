@@ -1,6 +1,15 @@
-﻿namespace Domain.Interfaces.Services
+﻿using Domain.Entities.Identity;
+
+namespace Domain.Interfaces.Services
 {
-    internal interface ITokenService
+    /// <summary>
+    /// Encapsulates JWT generation and validation.
+    /// </summary>
+    public interface ITokenService
     {
+        /// <summary>
+        /// Generates a signed JWT for the given user.
+        /// </summary>
+        string CreateToken(ApplicationUser user, IEnumerable<string> roles);
     }
 }
